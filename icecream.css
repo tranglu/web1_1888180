@@ -1,0 +1,230 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: 'Changa One', cursive;
+	font-size: 16px;
+    line-height: 20px;
+    color: #7C7C7C;
+}
+header li.nav-item{
+	margin-left: 25px;
+    padding: 0;
+
+}
+header a.nav-link{
+	font-weight: bold;
+	font-size: 18px;
+	color: black!important;
+	
+}
+header li.active>a.nav-link{
+	color: #2FA0D5!important;
+}
+
+header a.nav-link:hover{
+	color: #2FA0D5!important;
+}
+.form-control{
+	border-radius: 15px;
+}
+.search-button{
+	position: relative;
+	top:0;
+	left: -30px;
+}
+.social a {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 0;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.social a.twitter{
+	background: url("images/twitter.png")  0 0 no-repeat;;
+}
+.social a.twitter:hover{
+	background: url("images/twitter_active.png");
+}
+.social a.facebook{
+	background: url("images/facebook.png")  0 0 no-repeat;;
+}
+.social a.facebook:hover{
+	background-image: url("images/facebook_active.png");
+}
+#small-banner{
+	background-image: url("images/bg_slider.gif");
+	padding: 0.25em;
+}
+.banner h4 {
+    font-size: 60px;
+    line-height: 60px;
+    font-family: 'Changa One', cursive;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.menu {
+    display: inline-block;
+    
+    background-color: #FA97C2;
+    padding: 14px 62px;
+    border-radius: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 30px 0;
+   
+}
+.menu>a{
+	font: 30px 'Changa One', cursive;
+    line-height: 36px;
+     color: white;
+}
+.dots{
+	list-style: none;
+    padding: 0;
+    text-align: center;
+    height: 19px;
+    line-height: 19px;
+}
+.dots li {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    border-radius: 19px;
+    text-align: left;
+    /* text-indent: 9999px; */
+    background: white;
+    margin: 0 2px;
+    position: relative;
+}
+.dots li span {
+    border-radius: 9px;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.dots li.active span{
+	background-color: #73C926;
+}
+.dots li:hover span{
+	background-color: #73C926;
+}
+.about{
+	background: #FA97C2;
+	color: #814E64;
+}
+h3 {
+    font-weight: 600;
+    font-size: 60px;
+    margin: 10px 0;
+}
+.sign-up{
+	border: 3px dashed #814E64;
+	border-radius: 10px;
+
+}
+.sign-up>h3{
+	font-size: 35px;
+}
+.sign-up>input{
+	border-radius: 5px;
+	height: 40px;
+	width: 100%;
+
+}
+.sign-up>button{
+    float: right;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    background: #333333;
+    font: 22px 'Changa One', cursive;
+    text-transform: uppercase;
+    line-height: 26px;
+    padding: 10px 34px;
+    margin:5px 0px;
+}
+.date{
+	background-color: #73C926;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+	color: white;
+	line-height: 30px;
+    padding: 8px 0;
+    border-radius: 14px;
+    margin: 10px 0;
+}
+h4 {
+    font-family: 'Open sans', cursive;
+    font-weight: 400;
+    color: #333333;
+    font-size: 26px;
+    margin: 10px 0;
+}
+.new>h4{
+	color: black;
+	font-size: 20px;
+	font-weight: bold;
+}
+footer {
+    background: url("images/bg.gif") 0 center repeat;
+    padding: 20px;
+}
+footer ul{
+	display: block;
+}
+footer li {
+    display: inline-block;
+    padding: 0 90px 15px 0;
+}
+footer li>a.nav-link{
+	color: white!important;
+}
+footer li.active>a.nav-link{
+	color: #FA97C2!important;
+}
+
+footer a.nav-link:hover{
+	color: #FA97C2!important;
+}
+@media screen and (min-width: 768px){
+	.banner>.container {
+    position: relative;
+    padding: 110px 0 40px;
+}
+	.banner>.container:before {
+    position: absolute;
+    content: "";
+    background: url("images/logo_bg.png") 0 0 no-repeat;
+    width: 188px;
+    height: 133px;
+    top: 0;
+    left: 0;
+}
+.banner>.container:after {
+    position: absolute;
+    content: "";
+    background: url("images/search_bg.png") 0 0 no-repeat;
+    width: 230px;
+    height: 44px;
+    top: 0;
+    right: 0;
+}
+}
+/* Trang about */
+._about{
+	background: url("images/quot.png") top left no-repeat;
+    padding-left: 50px;
+}
+.img-about-1{
+	margin-right: 15px;
+	border-radius: 15px;
+}
+.text-dark{
+	color: black;
+}
