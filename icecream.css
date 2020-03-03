@@ -5,6 +5,7 @@ html,body{
 	font-size: 16px;
     line-height: 20px;
     color: #7C7C7C;
+    background-color: white;
 }
 header li.nav-item{
 	margin-left: 25px;
