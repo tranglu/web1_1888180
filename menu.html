@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-   <title>1888180-ice-creams</title>
+    <title>1888180-ice-creams</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><!-- mới thêm dòng script này nè -->
@@ -23,142 +22,138 @@
 
 <body>
     <!-- Phần header -->
-    <header>
+        <header>
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light px-0">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand logo col-1" href="#">
-                    <img src="images/logo.png" alt="">
-                </a>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                    <!-- <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a> -->
-                    <ul class="nav navbar-nav ml-auto">
-                       <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item  active">
-                            <a class="nav-link" href="menu.html">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contacts</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline navbar-form pull-right">
-                        <input class="form-control" type="text" placeholder="Search">
-                        <img class="search-button" src="images/search_button.png" alt="">
-                    </form>
-                    <div class="social">
-                        <a href="" class="twitter"></a>
-                        <a href="" class="facebook"></a>
+            <nav class="navbar navbar-expand-lg navbar-light bg-inverse">
+                <div class="container">
+                    <a class="navbar-brand logo col-1" href="index.html">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                    <button class="navbar-toggler hidden-sm-up float-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contacts</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline navbar-form pull-left">
+                            <input class="form-control" type="text" placeholder="Search">
+                            <img class="search-button" src="images/search_button.png" alt="">
+                        </form>
+                        <div class="social">
+                            <a href="" class="twitter"></a>
+                            <a href="" class="facebook"></a>
+                        </div>
                     </div>
                 </div>
-            </nav>
+            </nav> <!-- hết navbar -->
         </div>
     </header> <!-- hết header -->
     <!--    Phần banner -->
     <div class="banner container-fluid" id="small-banner">
     </div> <!-- hết banner -->
     <!--   phần main -->
-<div>
-    <h2>Menu</h2>
-    <p>Filter by category:</p>
-<div id="myBtnContainer">
-  
-  <!--  <a class="btn mr-2" href="#" onclick="filterSelection('all')"> Show all</a>
+    <div>
+        <div class="container">
+            <h2>Menu</h2>
+            <p>Filter by category:</p>
+            <div id="myBtnContainer">
+                <!--  <a class="btn mr-2" href="#" onclick="filterSelection('all')"> Show all</a>
     <a class="btn mr-2"href="#" onclick="filterSelection('first')"> First Category</a>
   <a class="btn mr-2"href="#" onclick="filterSelection('second')"> Second Category</a>
    <a class="btn" href="#" onclick="filterSelection('third')"> Third Category</a> -->
-    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-      <button class="btn" onclick="filterSelection('first')"> First Category</button>
-     <button class="btn" onclick="filterSelection('second')"> Second Category</button>
-     <button class="btn" onclick="filterSelection('third')"> Third Category</button>
-</div>
-
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column first">
-    <div class="content">
-      <img  class="img-thumbnail" src="images/gallery/gallery-img3.jpg" alt="Mountains">
-      
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('first')"> First Category</button>
+                <button class="btn" onclick="filterSelection('second')"> Second Category</button>
+                <button class="btn" onclick="filterSelection('third')"> Third Category</button>
+            </div>
+            <!-- Portfolio Gallery Grid -->
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column first">
+                    <div class="content">
+                        <img class="img-thumbnail" src="images/gallery/gallery-img3.jpg" alt="Mountains">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column first">
+                    <div class="content">
+                        <img class="img-thumbnail" src="images/gallery/gallery-img4.jpg" alt="Lights">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column first">
+                    <div class="content">
+                        <img class="img-thumbnail" src="images/gallery/gallery-img6.jpg" alt="Nature">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column second">
+                    <div class="content">
+                        <img class="img-thumbnail" src="images/gallery/gallery-img1.jpg">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column second">
+                    <div class="content">
+                        <img class="img-thumbnail" src="images/gallery/gallery-img10.jpg">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
+                    <div class="content">
+                        <img class="img-thumbnail" src="images/gallery/gallery-img2.jpg">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
+                    <div class="content">
+                        <img class="img-thumbnail" src="images/gallery/gallery-img5.jpg">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
+                    <div class="content">
+                        <img class="img-thumbnail" src="images/gallery/gallery-img7.jpg">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
+                    <div class="content">
+                        <img class="img-thumbnail" src="images/gallery/gallery-img8.jpg">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
+                    <div class="content">
+                        <img class="img-thumbnail" src="images/gallery/gallery-img9.jpg">
+                    </div>
+                </div>
+                <!-- END GRID -->
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column first">
-    <div class="content">
-      <img  class="img-thumbnail" src="images/gallery/gallery-img4.jpg" alt="Lights">
-    </div>
-  </div>
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column first">
-    <div class="content">
-      <img  class="img-thumbnail" src="images/gallery/gallery-img6.jpg" alt="Nature">
-    </div>
-  </div>
-
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column second">
-    <div class="content">
-      <img class="img-thumbnail" src="images/gallery/gallery-img1.jpg">
-    </div>
-  </div>
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column second">
-    <div class="content">
-      <img class="img-thumbnail" src="images/gallery/gallery-img10.jpg">
-    </div>
-  </div>
-  
-
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
-    <div class="content">
-      <img class="img-thumbnail" src="images/gallery/gallery-img2.jpg">
-    </div>
-  </div>
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
-    <div class="content">
-      <img class="img-thumbnail" src="images/gallery/gallery-img5.jpg">
-    </div>
-  </div>
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
-    <div class="content">
-      <img class="img-thumbnail" src="images/gallery/gallery-img7.jpg">
-    </div>
-  </div>
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
-    <div class="content">
-      <img class="img-thumbnail" src="images/gallery/gallery-img8.jpg">
-    </div>
-  </div>
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
-    <div class="content">
-      <img class="img-thumbnail" src="images/gallery/gallery-img9.jpg">
-    </div>
-  </div>
-<!-- END GRID -->
-</div>
-</div>
-    
     <footer class="container-fluid text-center">
         <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item  active">
-            <a class="nav-link" href="menu.html">Menu</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contacts</a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item  active">
+                <a class="nav-link" href="menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contacts</a>
+            </li>
         </ul>
         <small>Ice-cream © 2019 | PRIVACY POLICY</small>
     </footer>
