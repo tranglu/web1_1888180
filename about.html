@@ -14,7 +14,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="shorcut icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- <script type="text/javascript" src="1.js"></script> -->
+    <script type="text/javascript" src="icecream.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="vendor/fontawesome/css/fontawesome.min.css">
    <link rel="stylesheet" type="text/css" href="vendor/fontawesome/css/all.css"> -->
     <link rel="stylesheet" href="icecream.css">
@@ -69,42 +69,15 @@
     <!--   phần main -->
     <div class="main py-5">
         <div class="container">
+            <div id="content">
             <div class="row">
-                <div class="col-md-8">
-                    <h3 class="text-dark">About Us</h3>
-                    <div>
-                        <img class="float-left text-dark img-about-1" src="images/about-1.jpg" alt="">
-                        <h2 class="text-dark">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, similique. Eligendi est repellendus asperiores vero esse! Quibusdam vitae, dolore, veritatis ea, magnam voluptatum harum, illo voluptatibus sint laudantium alias ex.
-                            <a href="">Read more</a>
-                        </p>
-                    </div>
+                <div class="col-md-8" id="aboutus">
                 </div>
                 <div class="col-md-4">
-                    <h3 class="text-dark">Our Vision</h3>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <img class="img-fluid" src="images/vision/vision-1.jpg" alt="">
-                        </div>
-                        <div class="col-sm-8">
-                            <a href="">
-                                <h4 class="text-dark">Accumsan et</h4>
-                            </a>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <img class="img-fluid" src="images/vision/vision-2.jpg" alt="">
-                        </div>
-                        <div class="col-sm-8">
-                            <a href="">
-                                <h4 class="text-dark">Ut ultricies cond.</h4>
-                            </a>
-                            <p>Wel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim.</p>
-                        </div>
-                    </div>
+                    <h3 class="text-dark" >Our Vision</h3>
+                    <div id="visions"></div>
                 </div>
+            </div>
             </div>
         </div>
     </div><!-- hết main -->
@@ -112,22 +85,7 @@
     <div class="about py-4">
         <div class="container">
             <h3 class="text-white">Testimonials</h3>
-            <div class="row">
-                <div class="col _about">
-                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insieorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ilegunt saepius...</p>
-                    <div class="div">Patrick Pool</div>
-                    <a href="#">info@demolink.org</a>
-                </div>
-                <div class="col _about">
-                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insieorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ilegunt saepius...</p>
-                    <div class="div">Patrick Pool</div>
-                    <a href="#">info@demolink.org</a>
-                </div>
-                <div class="col _about">
-                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insieorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ilegunt saepius...</p>
-                    <div class="div">Patrick Pool</div>
-                    <a href="#">info@demolink.org</a>
-                </div>
+            <div class="row" id="testimonials">
             </div>
         </div>
     </div> <!-- HẾT ABOUT -->
@@ -135,27 +93,8 @@
     <div class="new py-5">
         <div class="container">
             <h3 class="text-dark">OUR TEAM</h3>
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="images/our-team/team-1.jpg" alt="">
-                    <h4>Emily Cramer</h4>
-                    <p>Duis in libero hendrerit magna con sectetur. tristique! Suspendisse.</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="images/our-team/team-2.jpg" alt="">
-                    <h4>Emily Cramer</h4>
-                    <p>Duis in libero hendrerit magna con sectetur. tristique! Suspendisse.</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="images/our-team/team-3.jpg" alt="">
-                    <h4>Emily Cramer</h4>
-                    <p>Duis in libero hendrerit magna con sectetur. tristique! Suspendisse.</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="images/our-team/team-4.jpg" alt="">
-                    <h4>Emily Cramer</h4>
-                    <p>Duis in libero hendrerit magna con sectetur. tristique! Suspendisse.</p>
-                </div>
+            <div class="row" id="team">
+                
             </div>
         </div>
     </div> <!-- hết new -->
@@ -179,6 +118,82 @@
         </ul>
         <small>Ice-cream © 2019 | PRIVACY POLICY</small>
     </footer>
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/js/handlebars-v4.1.2.js"></script>
+    <script id="about-aboutus" type="text/x-handlebars-template">
+        {{#each data}}
+        <h3 class="text-dark">{{name}}</h3>
+                    <div>
+                        <img class="float-left text-dark img-about-1" src="{{thumbpath}}" alt="">
+                        <h2 class="text-dark">{{{summary}}}
+                            <a href="#" onclick="loadData('aboutus/{{id}}','#content','#details-template');">Read more</a>
+                        </p>
+                    </div>
+        {{/each}}
+    </script>
+    
+    
+    <script id="about-visions" type="text/x-handlebars-template">
+        {{#each data}}
+        <div class="row">
+                       <div class="col-sm-4">
+                           <img class="img-fluid" src="{{thumbpath}}" alt="">
+                       </div>
+                       <div class="col-sm-8">
+                           <a href="#" onclick="loadData('visions/{{id}}','#content','#details-template');">
+                               <h4 class="text-dark">{{name}}</h4>
+                           </a>
+                           <p>{{summary}}</p>
+                       </div>
+                   </div>
+        {{/each}}
+    </script>
+    <script id="about-testimonials" type="text/x-handlebars-template">
+        {{#each data}}
+        <div class="col _about">
+            <p>{{summary}}</p>
+            <div class="div">{{name}}</div>
+            <a href="#">{{email}}</a>
+        </div>
+        {{/each}}
+    </script>
+    <script id="about-team" type="text/x-handlebars-template">
+        {{#each data}}
+       <div class="col-md-3">
+            <img src="{{thumbpath}}" alt="">
+            <h4>{{name}}</h4>
+            <p>{{summary}}</p>
+        </div>
+        {{/each}}
+    </script>
+    <script id="details-template" type="text/x-handlebars-template">
+        <!-- small-banner -->
+        <div class="container-fluid" id="small-banner">
+        </div>
+         <!-- small-banner -->
+        <!--  details -->
+         {{#each data}}
+         <div class="container py-5">
+            <h3 class="text-dark">{{name}}</h3>
+             <div class="row py-3">
+                <div class="col-3"><img src="{{imagepath}}" alt="" class="round-img"></div>
+                 
+                <div class="col-9">{{{description}}}</div>
+            </div>
+        </div>
+         {{/each}}
+        <!--  details -->
+    </script>
+    <script>
+      $(document).ready(function() {
+        loadData("aboutus", "#aboutus", "#about-aboutus");
+        loadData("visions", "#visions", "#about-visions");
+        loadData("testimonials", "#testimonials", "#about-testimonials");
+        loadData("team", "#team", "#about-team");
+      });
+    </script>
 </body>
 
 </html>

@@ -11,10 +11,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Changa+One:400,400i&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="shorcut icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- <script type="text/javascript" src="1.js"></script> -->
+    <script type="text/javascript" src="icecream.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="vendor/fontawesome/css/fontawesome.min.css">
    <link rel="stylesheet" type="text/css" href="vendor/fontawesome/css/all.css"> -->
     <link rel="stylesheet" href="icecream.css">
@@ -63,6 +63,7 @@
             </nav> <!-- hết navbar -->
         </div>
     </header> <!-- hết header -->
+    <div id="content">
     <!--    Phần banner -->
     <div class="banner container-fluid" id="small-banner">
         <div class="container text-center">
@@ -78,8 +79,8 @@
     <!--   phần main -->
     <div class="main py-5">
         <div class="container">
-            <div class="row">
-                <div class="col">
+            <div class="row" id="products">
+                <!-- <div class="col">
                     <div class="text-center">
                         <img src="images/icon-1.png" alt="Card image cap">
                         <div class="body">
@@ -118,7 +119,7 @@
                             <a href="#">Read more</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div><!-- hết main -->
@@ -149,46 +150,11 @@
     <div class="new py-5">
         <div class="container">
             <h3>News</h3>
-            <div class="row">
-                <div class="col">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="date float-left">DEC. 25.</div>
-                            <a href="#"> Read more</a>
-                        </div>
-                        <div class="col-sm-8">
-                            <h4>Accumsan et</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo atque veniam, aspernatur.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="date float-left">DEC. 25.</div>
-                            <a href="#"> Read more</a>
-                        </div>
-                        <div class="col-sm-8">
-                            <h4>Accumsan et</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo atque veniam, aspernatur.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="date float-left">DEC. 25.</div>
-                            <a href="#"> Read more</a>
-                        </div>
-                        <div class="col-sm-8">
-                            <h4>Accumsan et</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo atque veniam, aspernatur.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="row" id="news">
             </div>
         </div>
     </div> <!-- hết new -->
+    </div>
     <footer class="container-fluid text-center">
         <ul>
             <li class="nav-item active">
@@ -209,6 +175,77 @@
         </ul>
         <small>Ice-cream © 2019 | PRIVACY POLICY</small>
     </footer>
+    <!-- <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/js/handlebars-v4.1.2.js"></script>
+    <script id="products-template" type="text/x-handlebars-template">
+        {{#each data}}
+        <div class="col">
+            <div class="text-center">
+                <img src="{{thumbpath}}" alt="Card image cap">
+                <div class="body">
+                    <h4 class="title">{{name}}</h4>
+                    <p class="text">{{summary}}</p>
+                    <a href="#" onclick="loadData('products/{{id}}','#content','#details-template')">Read more</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script id="news-template" type="text/x-handlebars-template">
+        {{#each data}}
+        <div class="col">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="date float-left">{{date}}</div>
+                <a href="#" onclick="loadData('news/{{id}}','#content','#details-template');"> Read more</a>
+            </div>
+            <div class="col-sm-8">
+                <h4>{{name}}</h4>
+                <p>{{summary}}</p>
+            </div>
+        </div>
+        </div>
+        {{/each}}
+    </script>
+    <script id="details-template" type="text/x-handlebars-template">
+        <!-- small-banner -->
+        <div class="container-fluid" id="small-banner">
+        </div>
+         <!-- small-banner -->
+        <!--  details -->
+         {{#each data}}
+         <div class="container py-5">
+            <h3 class="text-dark">{{name}}</h3>
+            <div>{{{description}}}</div>
+        </div>
+         {{/each}}
+        <!--  details -->
+    </script>
+    <script>
+        $(document).ready(function() {
+           loadData('products','#products','#products-template');
+           loadData('news','#news','#news-template');
+        });
+        /*function loadData(request,tagetId,SourceId){
+            $.ajax({
+                url: 'https://web1-api.herokuapp.com/api/'+request,
+                cache:false,
+                success: function(data){
+                    let jsonData={
+                        data:data
+                    };
+                    let target=$(tagetId);
+                    let source=$(SourceId).html();
+                    let template = Handlebars.compile(source);
+                    $(target).html(template(jsonData));
+                }
+               
+             });
+        }*/
+    </script>
 </body>
 
 </html>
