@@ -14,10 +14,11 @@
    
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="shorcut icon" href="images/favicon.ico" type="image/x-icon">
-    <script type="text/javascript" src="icecream.js"></script>
+    <link rel="stylesheet" href="icecream.css">
+    
     <!-- <link rel="stylesheet" type="text/css" href="vendor/fontawesome/css/fontawesome.min.css">
    <link rel="stylesheet" type="text/css" href="vendor/fontawesome/css/all.css"> -->
-    <link rel="stylesheet" href="icecream.css">
+    
 </head>
 
 <body>
@@ -140,6 +141,7 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/handlebars-v4.1.2.js"></script>
+    <script type="text/javascript" src="icecream.js"></script>
     <script id="products-template" type="text/x-handlebars-template">
         {{#each data}}
         <div class="col">
@@ -189,7 +191,7 @@
            loadData('products','#products','#products-template');
            loadData('news','#news','#news-template');
         });
-        function loadData(request,tagetId,SourceId){
+        /*function loadData(request,tagetId,SourceId){
             $.ajax({
                 url: 'https://web1-api.herokuapp.com/api/'+request,
                 cache:false,
@@ -204,7 +206,7 @@
                 }
                
              });
-        }
+        }*/
     </script>
 </body>
 
