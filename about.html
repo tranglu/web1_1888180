@@ -121,7 +121,7 @@
     <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="vendor/js/handlebars-v4.1.2.js"></script>
+    <script type="text/javascript" src="vendor/js/handlebars-v4.7.3.js"></script>
     <script id="about-aboutus" type="text/x-handlebars-template">
         {{#each data}}
         <h3 class="text-dark">{{name}}</h3>
@@ -195,7 +195,7 @@
       });
       function loadData(request,tagetId,SourceId){
             $.ajax({
-                url: 'http://web1-api.herokuapp.com/api/'+request,
+                url: 'https://web1-api.herokuapp.com/api/'+request,
                 cache:false,
                 success: function(data){
                     let jsonData={
