@@ -231,3 +231,22 @@ footer a.nav-link:hover{
 .text-dark{
 	color: black;
 }
+.round-img {
+    border: none;
+    border-radius: 15px;
+    float: left;
+    margin-right: 15px;
+}
+/* trang blog */
+.blog-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+.blog-list li {
+    padding-bottom: 10px;
+    padding-left: 24px;
+    background: url("images/marker1.png") 0 4px no-repeat;
+}
+.blogs{
+    clear: both;
+}

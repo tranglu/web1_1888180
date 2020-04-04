@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><!-- mới thêm dòng script này nè -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Changa+One:400,400i&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -67,9 +67,10 @@
     <div class="banner container-fluid" id="small-banner">
     </div> <!-- hết banner -->
     <!--   phần main -->
+   <div id="content">
     <div class="main py-5">
         <div class="container">
-            <div id="content">
+            
             <div class="row">
                 <div class="col-md-8" id="aboutus">
                 </div>
@@ -77,7 +78,7 @@
                     <h3 class="text-dark" >Our Vision</h3>
                     <div id="visions"></div>
                 </div>
-            </div>
+            
             </div>
         </div>
     </div><!-- hết main -->
@@ -98,6 +99,7 @@
             </div>
         </div>
     </div> <!-- hết new -->
+    </div>
     <footer class="container-fluid text-center">
         <ul>
             <li class="nav-item">
@@ -126,29 +128,27 @@
     <script id="about-aboutus" type="text/x-handlebars-template">
         {{#each data}}
         <h3 class="text-dark">{{name}}</h3>
-                    <div>
-                        <img class="float-left text-dark img-about-1" src="{{thumbpath}}" alt="">
-                        <h2 class="text-dark">{{{summary}}}
-                            <a href="#" onclick="loadData('aboutus/{{id}}','#content','#details-template');">Read more</a>
-                        </p>
-                    </div>
+            <div>
+                <img class="float-left text-dark img-about-1" src="{{thumbpath}}" alt="">
+                <h2 class="text-dark">{{{summary}}}
+                    <a href="#" onclick="loadData('aboutus/{{id}}','#content','#details-template');">Read more</a>
+                </p>
+            </div>
         {{/each}}
     </script>
-    
-    
     <script id="about-visions" type="text/x-handlebars-template">
         {{#each data}}
         <div class="row">
-                       <div class="col-sm-4">
-                           <img class="img-fluid" src="{{thumbpath}}" alt="">
-                       </div>
-                       <div class="col-sm-8">
-                           <a href="#" onclick="loadData('visions/{{id}}','#content','#details-template');">
-                               <h4 class="text-dark">{{name}}</h4>
-                           </a>
-                           <p>{{summary}}</p>
-                       </div>
-                   </div>
+            <div class="col-sm-4">
+                   <img class="img-fluid" src="{{thumbpath}}" alt="">
+               </div>
+               <div class="col-sm-8">
+                   <a href="#" onclick="loadData('visions/{{id}}','#content','#details-template');">
+                       <h4 class="text-dark">{{name}}</h4>
+                   </a>
+                   <p>{{summary}}</p>
+            </div>
+        </div>
         {{/each}}
     </script>
     <script id="about-testimonials" type="text/x-handlebars-template">
@@ -163,7 +163,7 @@
     <script id="about-team" type="text/x-handlebars-template">
         {{#each data}}
        <div class="col-md-3">
-            <img src="{{thumbpath}}" alt="">
+            <a href="#" onclick="loadData('team/{{id}}','#content','#details-template');"><img src="{{thumbpath}}" alt=""></a>
             <h4>{{name}}</h4>
             <p>{{summary}}</p>
         </div>
@@ -179,9 +179,9 @@
          <div class="container py-5">
             <h3 class="text-dark">{{name}}</h3>
              <div class="row py-3">
-                <div class="col-3"><img src="{{imagepath}}" alt="" class="round-img"></div>
+                <div class="col-5"><img src="{{imagepath}}" alt="" class="round-img pull-left"></div>
                  
-                <div class="col-9">{{{description}}}</div>
+                <div class="col-7">{{{description}}}</div>
             </div>
         </div>
          {{/each}}

@@ -7,17 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><!-- mới thêm dòng script này nè -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   
     <link href="https://fonts.googleapis.com/css?family=Changa+One:400,400i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="shorcut icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/Portfolio.css">
+    <!-- <link rel="stylesheet" href="css/Portfolio.css"> -->
     <link rel="stylesheet" href="icecream.css">
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/Portfolio.js"></script>
+   <!--  <script type="text/javascript" src="js/Portfolio.js"></script> -->
 </head>
 
 <body>
@@ -71,66 +69,11 @@
         <div class="container">
             <h2>Menu</h2>
             <p>Filter by category:</p>
-            <div id="myBtnContainer">
-                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-                <button class="btn" onclick="filterSelection('first')"> First Category</button>
-                <button class="btn" onclick="filterSelection('second')"> Second Category</button>
-                <button class="btn" onclick="filterSelection('third')"> Third Category</button>
-            </div>
-            <!-- Portfolio Gallery Grid -->
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column first">
-                    <div class="content">
-                        <img class="img-thumbnail" src="images/gallery/gallery-img3.jpg" alt="Mountains">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column first">
-                    <div class="content">
-                        <img class="img-thumbnail" src="images/gallery/gallery-img4.jpg" alt="Lights">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column first">
-                    <div class="content">
-                        <img class="img-thumbnail" src="images/gallery/gallery-img6.jpg" alt="Nature">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column second">
-                    <div class="content">
-                        <img class="img-thumbnail" src="images/gallery/gallery-img1.jpg">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column second">
-                    <div class="content">
-                        <img class="img-thumbnail" src="images/gallery/gallery-img10.jpg">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
-                    <div class="content">
-                        <img class="img-thumbnail" src="images/gallery/gallery-img2.jpg">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
-                    <div class="content">
-                        <img class="img-thumbnail" src="images/gallery/gallery-img5.jpg">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
-                    <div class="content">
-                        <img class="img-thumbnail" src="images/gallery/gallery-img7.jpg">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
-                    <div class="content">
-                        <img class="img-thumbnail" src="images/gallery/gallery-img8.jpg">
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column third">
-                    <div class="content">
-                        <img class="img-thumbnail" src="images/gallery/gallery-img9.jpg">
-                    </div>
-                </div>
-                <!-- END GRID -->
-            </div>
+            <ul class="nav justify-content-lg-left" id="gallery-categories">
+
+            </ul>
+            <div class="row" id="gallery">
+            </div>  
         </div>
     </div>
     <footer class="container-fluid text-center">
@@ -153,6 +96,45 @@
         </ul>
         <small>Ice-cream © 2019 | PRIVACY POLICY</small>
     </footer>
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/handlebars-v4.1.2.js"></script>
+    <script type="text/javascript" src="icecream.js"></script>
+     <script id="gallery-categories-template" type="text/x-handlebars-template">
+        <li class="nav-item">
+                    <a class="nav-link disabled pl-0" href="#" onclick="loadGallery(this)">Show all</a>
+        </li>
+                
+        {{#each data}}
+            <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="loadGallery(this,{{id}})">{{name}}</a>
+            </li>
+        {{/each}}
+    </script>
+    <script id="gallery-template" type="text/x-handlebars-template">
+         {{#each data}}
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2 column first">
+                        <img class="img-thumbnail" src="{{imagepath}}">
+                </div>
+             {{/each}}
+    </script>
+    <script>
+        $(document).ready(function() {
+            loadData(`gallery-categories`, '#gallery-categories', '#gallery-categories-template');
+            loadData(`gallery`, '#gallery', '#gallery-template');
+        });
+        function loadGallery(link,id){
+            if(id){
+                loadData(`gallery/categories/${id}`, '#gallery', '#gallery-template');
+            }
+            else{
+                loadData(`gallery`, '#gallery', '#gallery-template');
+            }
+            $('#gallery-template .nav-link').removeClass('disabled');
+            $(link).addClass('disabled');
+        }
+    </script>
 </body>
 
 </html>
