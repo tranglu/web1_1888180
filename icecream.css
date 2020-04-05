@@ -238,11 +238,18 @@ footer a.nav-link:hover{
     margin-right: 15px;
 }
 /* trang blog */
-.blog-list {
+.list {
     list-style-type: none;
     padding-left: 0;
 }
-.blog-list li {
+.list a {
+    color: #7c7c7c;
+    text-decoration: none;
+}
+.list a:hover {
+    color: #73c926;
+}
+.list li {
     padding-bottom: 10px;
     padding-left: 24px;
     background: url("images/marker1.png") 0 4px no-repeat;
