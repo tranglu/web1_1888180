@@ -58,6 +58,8 @@ header a.nav-link:hover{
 #small-banner{
 	background-image: url("images/bg_slider.gif");
 	padding: 0.25em;
+    background-size: center cover;
+    position: relative;
 }
 .banner h4 {
     font-size: 60px;

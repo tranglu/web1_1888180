@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script><!-- mới thêm dòng script này nè -->
-  
     <link href="https://fonts.googleapis.com/css?family=Changa+One:400,400i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="shorcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -16,7 +15,7 @@
 
 <body>
     <!-- Phần header -->
-        <header>
+    <header>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-inverse">
                 <div class="container">
@@ -62,71 +61,67 @@
     </div> <!-- hết banner -->
     <!--   phần main -->
     <div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-9">
-            <h2>BLOG</h2>
-        <!-- Portfolio Gallery Grid -->
-        <div class="row" id="blogs">
-        </div> 
-        <div id="blogs-pagination"></div>
-        </div>
-          <div class="col-12 col-md-3">
-            <h3 class="text-dark">Categories</h3>
-            <ul class="list" id="blogs-categories"></ul>
-            <h3 class="text-dark">Archives</h3>
-            <ul class="list" id="blogs-archives"></ul>
-           
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-9">
+                    <h2>BLOG</h2>
+                    <!-- Portfolio Gallery Grid -->
+                    <div class="row" id="blogs">
+                    </div>
+                    <div id="blogs-pagination"></div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h3 class="text-dark">Categories</h3>
+                    <ul class="list" id="blogs-categories"></ul>
+                    <h3 class="text-dark">Archives</h3>
+                    <ul class="list" id="blogs-archives"></ul>
+                </div>
             </div>
         </div>
-    </div>
-    <footer class="container-fluid text-center">
-        <ul>
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="menu.html">Menu</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contacts</a>
-            </li>
-        </ul>
-        <small>Ice-cream © 2019 | PRIVACY POLICY</small>
-    </footer>
-    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/handlebars-v4.1.2.js"></script>
-   
-    
-     <script type="text/javascript" src="js/handlebars-pagination-helper.js"></script>
-     <script type="text/javascript" src="icecream.js"></script>
-    <script id="blogs-template" type="text/x-handlebars-template">
-         
-        {{#each data.data}}
-       <div class="blogs py-3">
-             <div>
-                <h4>{{name}}</h4>
-                <div class="mb-3">by{{author}} in <a href="#" onclick="loadBlogs ('blogs/categories/{{categoryId}}');" > Blog. {{category.name}} </a>on {{date}} Hits: 210 <a href="#">Comments ({{comments.length}})</a></div>
-                <div>
-                    <img class="round-img" src="{{thumbpath}}" alt="" />
-                    {{{summary}}}<br><br>
-                        <a href="#" onclick="loadDetails ('{{id}}')">Read more</a>
-            </div>
-        </div>
+        <footer class="container-fluid text-center">
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contacts</a>
+                </li>
+            </ul>
+            <small>Ice-cream © 2019 | PRIVACY POLICY</small>
+        </footer>
+        <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/handlebars-v4.1.2.js"></script>
+        <script type="text/javascript" src="js/handlebars-pagination-helper.js"></script>
+        <script type="text/javascript" src="icecream.js"></script>
+        <script id="blogs-template" type="text/x-handlebars-template">
+            {{#each data.data}}
+               <div class="blogs py-3">
+                     <div>
+                        <h4>{{name}}</h4>
+                        <div class="mb-3">by{{author}} in <a href="#" onclick="loadBlogs ('blogs/categories/{{categoryId}}');" > Blog. {{category.name}} </a>on {{format date}} Hits: 210 <a href="#">Comments ({{comments.length}})</a></div>
+                        <div>
+                            <img class="round-img" src="{{thumbpath}}" alt="" />
+                            {{{summary}}}<br><br>
+                                <a href="#" onclick="loadDetails ('{{id}}')">Read more</a>
+                    </div>
+                </div>
                     
-        {{/each}}
+            {{/each}}
 
     </script>
-    <script id="blogs-details-template" type="text/x-handlebars-template">        
-        {{#each data}}
+        <script id="blogs-details-template" type="text/x-handlebars-template">
+            {{#each data}}
             <div class="blog py-3">
                 <h4>{{name}}</h4>
                 <div>by {{author}} in <a href="#"> Blog. {{category.name}} </a> on 
@@ -139,23 +134,24 @@
             <div class="py-3">
                 <h4 class="text-dark"> Leave your comment </h4>
                 <h4 class="text-dark"> Post comment as a guest </h4>
-                    <form>
+                    <form id="form-comment" method="POST" onsubmit="return addComment()" data-blog-id="{{id}}">
                       <div class="form-row">
                         <div class="col">
-                          Name:<input type="text" class="form-control my-2" required >
+                          Name:<input type="text" id="name" class="form-control my-2" required >
                         </div>
                         <div class="col">
-                          Email: <input type="text" class="form-control my-2" >
+                          Email:  <input type="email" id="email" class="form-control my-2" placeholder="email" required pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please enter an email address')"/>
                         </div>
-                        <textarea class="form-control my-2" id="comments" name="comments" placeholder="comments"></textarea>
-                       
-                            <div class="col-6 "><input class="form-check-input my-2" type="checkbox" name="agree"> Agree to terms and conditions</div>
-                            <div class="col-6 text-right"><!-- <input type="submit" value="Submit Conmment">  -->
+                        <textarea class="form-control my-2" id="comment" row="3" name="comment" placeholder="comments" required></textarea>
+                        <div class="col-6 m-0">
+                            <input class="form-check-input my-2" type="checkbox" name="agree" id="agree" value="false" required> Agree to terms and conditions
+                        </div>
+                        <div class="col-6 text-right">
                              <button type="submit " class="btn btn-link btn-sm ">Submit Comment</button>
-                            </div>
+                        </div>
                       </div>
                     </form>
-                <div class="bg-dark text-uppercase my-2" id="comment"> Comments ({{comments.length}}) </div>
+                <div class="bg-dark text-uppercase my-2"> Comments ({{comments.length}}) </div>
                 {{#each comments}}
                     <div class="row px-4">
                         <div>
@@ -170,18 +166,18 @@
             </div>
         {{/each}}
     </script>
-    <script id="blogs-categories-template" type="text/x-handlebars-template">
-        {{#each data}}
+        <script id="blogs-categories-template" type="text/x-handlebars-template">
+            {{#each data}}
         <li><a href="#" onclick="loadBlogs('blogs/categories/{{id}}')">Blogs.{{name}}</a></li>
         {{/each}}
     </script>
-    <script id="blogs-archives-template" type="text/x-handlebars-template">
-         {{#each data}}
+        <script id="blogs-archives-template" type="text/x-handlebars-template">
+            {{#each data}}
         <li><a href="#" onclick="loadBlogs('blogs/archives/{{month}}-{{year}}')">{{monthString}},{{year}}</a></li>
         {{/each}}
     </script>
-    <script id="blogs-pagination-template" type="text/x-handlebars-template">
-        {{#pagination currentPage pageCount size api}}
+        <script id="blogs-pagination-template" type="text/x-handlebars-template">
+            {{#pagination currentPage pageCount size api}}
             <nav aria-label="Page navigation" style="clear:both" class="py-3">
                 <ul class="pagination">
                     {{#unless startFromFirstPage}}
@@ -211,46 +207,85 @@
             </nav>
             {{/pagination}}
     </script>
-    <script>
+        <script>
         $(document).ready(function() {
-           loadData('blogs-categories','#blogs-categories','#blogs-categories-template');
-           loadData('blogs-archives','#blogs-archives','#blogs-archives-template');
-           loadBlogs('blogs');
+            loadData('blogs-categories', '#blogs-categories', '#blogs-categories-template');
+            loadData('blogs-archives', '#blogs-archives', '#blogs-archives-template');
+            loadBlogs('blogs');
+            Handlebars.registerHelper('format', date=> {
+                var date=new Date(date);
+                return date.toUTCString();
+            })
         });
-        function loadBlogs(request,page=1){
+
+        function loadBlogs(request, page = 1) {
             //loadData(request,,);
             $.ajax({
                 url: `https://web1-api.herokuapp.com/api/${request}?page=${page}`,
-                cache:false,
-                success: function(data){
-                    let jsonData={
-                        data:data
+                cache: false,
+                success: function(data) {
+                    let jsonData = {
+                        data: data
                     };
-                    let target=$("#blogs");
-                    let source=$("#blogs-template").html();
+                    let target = $("#blogs");
+                    let source = $("#blogs-template").html();
                     let template = Handlebars.compile(source);
                     $(target).html(template(jsonData));
-                    jsonData={
-                        currentPage:page,
-                        size:2,
-                        pageCount:data.pageCount,
-                        api:request
+                    jsonData = {
+                        currentPage: page,
+                        size: 2,
+                        pageCount: data.pageCount,
+                        api: request
                     };
-                    target=$("#blogs-pagination");
-                    source=$("#blogs-pagination-template").html();
+                    target = $("#blogs-pagination");
+                    source = $("#blogs-pagination-template").html();
                     template = Handlebars.compile(source);
                     $(target).html(template(jsonData));
                 }
-               
-             });
+
+            });
         }
-        function loadDetails(id){
-            loadData(`blogs/${id}`,'#blogs','#blogs-details-template');
+
+        function loadDetails(id) {
+            loadData(`blogs/${id}`, '#blogs', '#blogs-details-template');
         }
-        /*function loadDetails(id) {
-            loadData(`blogs/${id}`, "#blogs", "#blogs-details-template");
-        }*/
-    </script>
+        function addComment(){
+            let formData={
+                name:$('#name').val(),
+                email:$('#email').val(),
+                comments:$('#comment').val(),
+                blogId:$('#form-comment').data('blogId'),
+               agree:$('#agree').prop('checked')
+            };
+            $.ajax({
+                url: "https://web1-api.herokuapp.com/users/authenticate",
+                dataType: "json",
+                type : "POST",
+                data: {
+                    username: 'test',
+                    password: '1c3cr3@m'
+                },
+                success : function(r) {
+                    $.ajax({
+                        url: "https://web1-api.herokuapp.com/users/comment",
+                        dataType: "json",
+                        type : "POST",
+                        headers: {
+                            "Authorization": 'Bearer ' + r.token
+                        },
+                        data:formData,
+                        success : function(r) {
+                            loadDetails(formData.blogId);
+                        },
+                        error:function(xhr,status,error) {
+                            window.alert(error);
+                        }
+                    });
+                }
+            });
+            return false;
+        }
+        </script>
 </body>
 
 </html>
