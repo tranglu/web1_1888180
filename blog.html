@@ -250,10 +250,17 @@
             loadData(`blogs/${id}`, '#blogs', '#blogs-details-template');
         }
         function addComment(){
+            /*let formData = {
+          name: $('#name').val(),
+          email: $('#email').val(),
+          comment: $('#comment').val(),
+          blogId: $('#form-comment').data('blogId'),
+          agree: $('#agree').prop('checked')
+        };*/
             let formData={
                 name:$('#name').val(),
                 email:$('#email').val(),
-                comments:$('#comment').val(),
+                comment:$('#comment').val(),
                 blogId:$('#form-comment').data('blogId'),
                agree:$('#agree').prop('checked')
             };

@@ -85,24 +85,25 @@
             </div>
             <h3 class="text-dark">Miscellaneous information:</h3>
             <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam tenetur deserunt unde asperiores, harum earum dignissimos nulla modi odio amet at veritatis quasi a voluptatibus porro! Excepturi possimus, soluta voluptatem.</div>
-            <i>Send an email. All fields with an * are required.</i>
+            <i class="py-2">Send an email. All fields with an * are required.</i>
             <div class="row">
+                <form action="#" method="POST">
                 <div class="col-4">
                     <h5>Name*</h5>
-                    <input class="form-control" id="name" />
+                    <input type="text" class="form-control" id="name" required/>
                 </div>
                 <div class="col-4">
                     <h5>Email*</h5>
-                    <input class="form-control" id="email"></input>
+                    <input type="email" class="form-control" id="email" required pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please match the requested format.')"></input>
                 </div>
                 <div class="col-4">
-                    <h5>Subject</h5>
-                    <input class="form-control" id="subject*"></input>
+                    <h5>Subject*</h5>
+                    <input type="text" class="form-control" id="subject*" required></input>
                 </div>
             </div>
             <br>
             <h5>Message</h5>
-            <textarea class="form-control" id="comments" name="comments" placeholder="comments"></textarea>
+            <textarea type="text" class="form-control" id="comments" name="comments" placeholder="comments"></textarea>
             <div class="row">
                 <div class="col-lg-8"></div>
                 <div class="col-lg-4">
@@ -110,6 +111,7 @@
                     <div>Send copy to yourself <input class="mx-1" type="checkbox" id="myCheck" /> <a href="">Send Email</a></div>
                 </div>
             </div>
+            </form>
         </div>
     </div><!-- hết main -->
     <!-- phần about -->
